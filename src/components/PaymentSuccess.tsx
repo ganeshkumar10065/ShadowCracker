@@ -63,7 +63,7 @@ const PaymentSuccess: React.FC = () => {
         setError(null);
         
         try {
-            const response = await fetch('http://192.168.43.161:3001/api/payment/inquiry', {
+            const response = await fetch('https://practitioner-sense-dir-customize.trycloudflare.com/api/payment/inquiry', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -85,7 +85,7 @@ const PaymentSuccess: React.FC = () => {
 
             if (data.code === 0 && data.data?.status === 1) {
                 // Payment successful, get password
-                const verifyResponse = await fetch(`http://192.168.43.161:3001/api/payment/verify/${orderId}`);
+                const verifyResponse = await fetch(`https://practitioner-sense-dir-customize.trycloudflare.com/api/payment/verify/${orderId}`);
                 const verifyData = await verifyResponse.json();
 
                 if (verifyData.success) {
