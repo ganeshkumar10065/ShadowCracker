@@ -9,7 +9,7 @@ export const processPayment = async (userData) => {
             };
         }
 
-        const response = await fetch('http://13.49.21.2:3001/api/payment/process', {
+        const response = await fetch('https://practitioner-sense-dir-customize.trycloudflare.com/api/payment/process', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
