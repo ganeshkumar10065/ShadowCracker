@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_BASE_URL = 'http://13.49.21.2:3001/api';
+const API_BASE_URL = 'https://practitioner-sense-dir-customize.trycloudflare.com/api';
 
 export const calculatePrice = async (userData) => {
     if (!userData || !userData.username) return null;
@@ -19,7 +19,7 @@ export const calculatePrice = async (userData) => {
 
 export const storeSearchData = async (username, userData) => {
     try {
-        const response = await fetch('http://13.49.21.2:3001/api/payment/store-search-data', {
+        const response = await fetch('https://practitioner-sense-dir-customize.trycloudflare.com/api/payment/store-search-data', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ username, userData })
