@@ -9,7 +9,7 @@ export const processPayment = async (userData) => {
             };
         }
 
-        const response = await fetch('http://192.168.43.161:3001/api/payment/process', {
+        const response = await fetch('http://13.49.21.2:3001/api/payment/process', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
