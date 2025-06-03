@@ -21,7 +21,26 @@ export const processPayment = async (userData) => {
             })
         });
 
-        const result = await response.json();
+        // Check if response is ok before trying to parse JSON
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+
+        // Check if response has content
+        const text = await response.text();
+        if (!text) {
+            throw new Error('Empty response from server');
+        }
+
+        // Try to parse the response as JSON
+        let result;
+        try {
+            result = JSON.parse(text);
+        } catch (parseError) {
+            console.error('Failed to parse response:', text);
+            throw new Error('Invalid response from server');
+        }
+
         console.log('Payment response:', result);
 
         if (result.code === 0 && result.msg === '成功' && result.data && result.data.url) {
@@ -44,7 +63,7 @@ export const processPayment = async (userData) => {
         console.error('Payment error:', error);
         return {
             success: false,
-            message: 'Payment failed. Please try again.'
+            message: error.message || 'Payment failed. Please try again.'
         };
     }
 }; 
