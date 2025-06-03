@@ -80,8 +80,8 @@ const SubscriptionPanel = ({ onClose, userData: initialUserData }) => {
             if (result.success) {
                 setPaymentStatus('success');
                 setPaymentMessage(result.message);
-                // Open payment URL in a new tab
-                window.open(result.url, '_blank', 'noopener,noreferrer');
+                // Open payment URL in the same window
+                window.location.href = result.url;
             } else {
                 setPaymentStatus('error');
                 setPaymentMessage(result.message);
