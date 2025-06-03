@@ -63,7 +63,7 @@ const PaymentSuccess: React.FC = () => {
         setError(null);
         
         try {
-            const response = await fetch('https://practitioner-sense-dir-customize.trycloudflare.com/api/payment/inquiry', {
+            const response = await fetch('https://shareware-ftp-questions-populations.trycloudflare.com/api/payment/inquiry', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
