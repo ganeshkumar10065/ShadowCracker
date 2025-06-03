@@ -14,7 +14,7 @@ export default defineConfig({
     port: 5173,
     proxy: {
       '/api': {
-        target: process.env.VITE_API_URL || 'https://practitioner-sense-dir-customize.trycloudflare.com',
+        target: process.env.VITE_API_URL || 'https://shareware-ftp-questions-populations.trycloudflare.com',
         changeOrigin: true,
         secure: false
       }
