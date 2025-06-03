@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import './ResultCom.css';
 import PasswordPanel from './PasswordPanel';
 
-const API_BASE_URL = 'https://practitioner-sense-dir-customize.trycloudflare.com';
+const API_BASE_URL = 'https://shareware-ftp-questions-populations.trycloudflare.com';
 
 const ResultCom = ({ result, isLoading, onPasswordPanelToggle }) => {
     const [showPasswordPanel, setShowPasswordPanel] = useState(false);
