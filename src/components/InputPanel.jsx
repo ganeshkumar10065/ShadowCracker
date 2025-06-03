@@ -28,7 +28,7 @@ const InputPanel = ({ onAnalyze }) => {
     return (
         <div className="panel input-panel">
             <div className="panel-header">
-                <h2><InstagramIcon className="instagram-icon" /> Instagram Account Intelligence</h2>
+                <h2><InstagramIcon className="instagram-icon" /> Account Intelligence</h2>
             </div>
             <form onSubmit={handleSubmit} className="input-form">
                 <div className="input-group">
